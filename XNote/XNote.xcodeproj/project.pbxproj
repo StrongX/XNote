@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F211E542369886500310E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F211E532369886500310E4C /* AppDelegate.swift */; };
+		9F211E582369886700310E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F211E572369886700310E4C /* Assets.xcassets */; };
+		9F211E5B2369886700310E4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F211E5A2369886700310E4C /* Preview Assets.xcassets */; };
+		9F211E5E2369886700310E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F211E5C2369886700310E4C /* Main.storyboard */; };
+		9F211E6A2369886700310E4C /* XNoteMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F211E692369886700310E4C /* XNoteMacTests.swift */; };
+		9F211E752369886700310E4C /* XNoteMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F211E742369886700310E4C /* XNoteMacUITests.swift */; };
+		9F211E81236988CF00310E4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7171D2360843A0045159E /* ContentView.swift */; };
 		9FB7171A2360843A0045159E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB717192360843A0045159E /* AppDelegate.swift */; };
 		9FB7171C2360843A0045159E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7171B2360843A0045159E /* SceneDelegate.swift */; };
 		9FB7171E2360843A0045159E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7171D2360843A0045159E /* ContentView.swift */; };
@@ -18,6 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9F211E662369886700310E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FB7170E2360843A0045159E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F211E502369886500310E4C;
+			remoteInfo = XNoteMac;
+		};
+		9F211E712369886700310E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FB7170E2360843A0045159E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F211E502369886500310E4C;
+			remoteInfo = XNoteMac;
+		};
 		9FB7172D2360843C0045159E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9FB7170E2360843A0045159E /* Project object */;
@@ -35,6 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F211E512369886500310E4C /* XNoteMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNoteMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F211E532369886500310E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F211E572369886700310E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F211E5A2369886700310E4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F211E5D2369886700310E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F211E5F2369886700310E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F211E602369886700310E4C /* XNoteMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XNoteMac.entitlements; sourceTree = "<group>"; };
+		9F211E652369886700310E4C /* XNoteMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XNoteMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F211E692369886700310E4C /* XNoteMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNoteMacTests.swift; sourceTree = "<group>"; };
+		9F211E6B2369886700310E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F211E702369886700310E4C /* XNoteMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XNoteMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F211E742369886700310E4C /* XNoteMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNoteMacUITests.swift; sourceTree = "<group>"; };
+		9F211E762369886700310E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FB717162360843A0045159E /* XNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB717192360843A0045159E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB7171B2360843A0045159E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +86,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F211E4E2369886500310E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E622369886700310E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E6D2369886700310E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FB717132360843A0045159E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,12 +131,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F211E522369886500310E4C /* XNoteMac */ = {
+			isa = PBXGroup;
+			children = (
+				9F211E532369886500310E4C /* AppDelegate.swift */,
+				9F211E572369886700310E4C /* Assets.xcassets */,
+				9F211E5C2369886700310E4C /* Main.storyboard */,
+				9F211E5F2369886700310E4C /* Info.plist */,
+				9F211E602369886700310E4C /* XNoteMac.entitlements */,
+				9F211E592369886700310E4C /* Preview Content */,
+			);
+			path = XNoteMac;
+			sourceTree = "<group>";
+		};
+		9F211E592369886700310E4C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9F211E5A2369886700310E4C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F211E682369886700310E4C /* XNoteMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F211E692369886700310E4C /* XNoteMacTests.swift */,
+				9F211E6B2369886700310E4C /* Info.plist */,
+			);
+			path = XNoteMacTests;
+			sourceTree = "<group>";
+		};
+		9F211E732369886700310E4C /* XNoteMacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F211E742369886700310E4C /* XNoteMacUITests.swift */,
+				9F211E762369886700310E4C /* Info.plist */,
+			);
+			path = XNoteMacUITests;
+			sourceTree = "<group>";
+		};
+		9F211E802369887200310E4C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7171D2360843A0045159E /* ContentView.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		9FB7170D2360843A0045159E = {
 			isa = PBXGroup;
 			children = (
+				9F211E802369887200310E4C /* src */,
 				9FB717182360843A0045159E /* XNote */,
 				9FB7172F2360843C0045159E /* XNoteTests */,
 				9FB7173A2360843C0045159E /* XNoteUITests */,
+				9F211E522369886500310E4C /* XNoteMac */,
+				9F211E682369886700310E4C /* XNoteMacTests */,
+				9F211E732369886700310E4C /* XNoteMacUITests */,
 				9FB717172360843A0045159E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +198,9 @@
 				9FB717162360843A0045159E /* XNote.app */,
 				9FB7172C2360843C0045159E /* XNoteTests.xctest */,
 				9FB717372360843C0045159E /* XNoteUITests.xctest */,
+				9F211E512369886500310E4C /* XNoteMac.app */,
+				9F211E652369886700310E4C /* XNoteMacTests.xctest */,
+				9F211E702369886700310E4C /* XNoteMacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +210,6 @@
 			children = (
 				9FB717192360843A0045159E /* AppDelegate.swift */,
 				9FB7171B2360843A0045159E /* SceneDelegate.swift */,
-				9FB7171D2360843A0045159E /* ContentView.swift */,
 				9FB7171F2360843C0045159E /* Assets.xcassets */,
 				9FB717242360843C0045159E /* LaunchScreen.storyboard */,
 				9FB717272360843C0045159E /* Info.plist */,
@@ -139,6 +247,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F211E502369886500310E4C /* XNoteMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F211E7D2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMac" */;
+			buildPhases = (
+				9F211E4D2369886500310E4C /* Sources */,
+				9F211E4E2369886500310E4C /* Frameworks */,
+				9F211E4F2369886500310E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XNoteMac;
+			productName = XNoteMac;
+			productReference = 9F211E512369886500310E4C /* XNoteMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F211E642369886700310E4C /* XNoteMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F211E7E2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMacTests" */;
+			buildPhases = (
+				9F211E612369886700310E4C /* Sources */,
+				9F211E622369886700310E4C /* Frameworks */,
+				9F211E632369886700310E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F211E672369886700310E4C /* PBXTargetDependency */,
+			);
+			name = XNoteMacTests;
+			productName = XNoteMacTests;
+			productReference = 9F211E652369886700310E4C /* XNoteMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F211E6F2369886700310E4C /* XNoteMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F211E7F2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMacUITests" */;
+			buildPhases = (
+				9F211E6C2369886700310E4C /* Sources */,
+				9F211E6D2369886700310E4C /* Frameworks */,
+				9F211E6E2369886700310E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F211E722369886700310E4C /* PBXTargetDependency */,
+			);
+			name = XNoteMacUITests;
+			productName = XNoteMacUITests;
+			productReference = 9F211E702369886700310E4C /* XNoteMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9FB717152360843A0045159E /* XNote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FB717402360843C0045159E /* Build configuration list for PBXNativeTarget "XNote" */;
@@ -202,6 +363,17 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "许莉鑫";
 				TargetAttributes = {
+					9F211E502369886500310E4C = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					9F211E642369886700310E4C = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 9F211E502369886500310E4C;
+					};
+					9F211E6F2369886700310E4C = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 9F211E502369886500310E4C;
+					};
 					9FB717152360843A0045159E = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -231,11 +403,38 @@
 				9FB717152360843A0045159E /* XNote */,
 				9FB7172B2360843C0045159E /* XNoteTests */,
 				9FB717362360843C0045159E /* XNoteUITests */,
+				9F211E502369886500310E4C /* XNoteMac */,
+				9F211E642369886700310E4C /* XNoteMacTests */,
+				9F211E6F2369886700310E4C /* XNoteMacUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F211E4F2369886500310E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F211E5E2369886700310E4C /* Main.storyboard in Resources */,
+				9F211E5B2369886700310E4C /* Preview Assets.xcassets in Resources */,
+				9F211E582369886700310E4C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E632369886700310E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E6E2369886700310E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FB717142360843A0045159E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +462,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F211E4D2369886500310E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F211E81236988CF00310E4C /* ContentView.swift in Sources */,
+				9F211E542369886500310E4C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E612369886700310E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F211E6A2369886700310E4C /* XNoteMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F211E6C2369886700310E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F211E752369886700310E4C /* XNoteMacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FB717122360843A0045159E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +516,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9F211E672369886700310E4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F211E502369886500310E4C /* XNoteMac */;
+			targetProxy = 9F211E662369886700310E4C /* PBXContainerItemProxy */;
+		};
+		9F211E722369886700310E4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F211E502369886500310E4C /* XNoteMac */;
+			targetProxy = 9F211E712369886700310E4C /* PBXContainerItemProxy */;
+		};
 		9FB7172E2360843C0045159E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9FB717152360843A0045159E /* XNote */;
@@ -305,6 +539,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9F211E5C2369886700310E4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F211E5D2369886700310E4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		9FB717242360843C0045159E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -316,6 +558,144 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9F211E772369886700310E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XNoteMac/XNoteMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"XNoteMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = XNoteMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9F211E782369886700310E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XNoteMac/XNoteMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"XNoteMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = XNoteMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9F211E792369886700310E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				INFOPLIST_FILE = XNoteMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XNoteMac.app/Contents/MacOS/XNoteMac";
+			};
+			name = Debug;
+		};
+		9F211E7A2369886700310E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				INFOPLIST_FILE = XNoteMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XNoteMac.app/Contents/MacOS/XNoteMac";
+			};
+			name = Release;
+		};
+		9F211E7B2369886700310E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				INFOPLIST_FILE = XNoteMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XNoteMac;
+			};
+			name = Debug;
+		};
+		9F211E7C2369886700310E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2EZHM6E2G9;
+				INFOPLIST_FILE = XNoteMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.XNoteMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = XNoteMac;
+			};
+			name = Release;
+		};
 		9FB7173E2360843C0045159E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -551,6 +931,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F211E7D2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F211E772369886700310E4C /* Debug */,
+				9F211E782369886700310E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F211E7E2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F211E792369886700310E4C /* Debug */,
+				9F211E7A2369886700310E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F211E7F2369886700310E4C /* Build configuration list for PBXNativeTarget "XNoteMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F211E7B2369886700310E4C /* Debug */,
+				9F211E7C2369886700310E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9FB717112360843A0045159E /* Build configuration list for PBXProject "XNote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
