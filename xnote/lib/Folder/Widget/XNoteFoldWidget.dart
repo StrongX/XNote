@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'XNoteFoldItemWidget.dart';
+import 'XNoteFoldAddWidget.dart';
+
 import 'package:xnote/Folder/Model/XNoteFoldManage.dart';
 import 'package:xnote/Folder/Model/XNoteFoldItemModel.dart';
-import 'XNoteFoldAddWidget.dart';
+import 'package:xnote/Common/Widget/Dialog/XNoteInputDialogWidget.dart';
 
 class XNoteFoldWidget extends StatefulWidget {
   @override
@@ -51,8 +54,12 @@ class XNoteFolderWidgetState extends State<XNoteFoldWidget> {
   }
 
   void addFoldAction() {
-    _dataSource.insert(
-        0, XNoteFoldItemModel(name: '文件夹${_dataSource.length}'));
-    _listKey.currentState.insertItem(1);
+    XNoteInputDialogWidget.showInputDialog(
+        context: context,
+        title: "文件夹名",
+        callBack: (String title) {
+          _dataSource.insert(0, XNoteFoldItemModel(name: title));
+          _listKey.currentState.insertItem(1);
+        });
   }
 }

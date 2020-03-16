@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'XNotePageItemWidget.dart';
+import 'XNotePageAddWidget.dart';
+
 import 'package:xnote/Page/Model/XNotePageManage.dart';
 import 'package:xnote/Page/Model/XNotePageItemModel.dart';
-import 'XNotePageAddWidget.dart';
+import 'package:xnote/Common/Widget/Dialog/XNoteInputDialogWidget.dart';
 
 class XNotePageWidget extends StatefulWidget {
   @override
@@ -51,8 +54,12 @@ class XNotePageWidgetState extends State<XNotePageWidget> {
   }
 
   void addFoldAction() {
-    _dataSource.insert(
-        0, XNotePageItemModel(name: '文章${_dataSource.length}'));
-    _listKey.currentState.insertItem(1);
+    XNoteInputDialogWidget.showInputDialog(
+        context: context,
+        title: "文章名",
+        callBack: (String text) {
+          _dataSource.insert(0, XNotePageItemModel(name: text));
+          _listKey.currentState.insertItem(1);
+        });
   }
 }
