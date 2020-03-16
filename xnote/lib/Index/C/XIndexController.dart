@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xnote/Folder/Widget/XNoteFoldWidget.dart';
+import 'package:xnote/Page/Widget/XNotePageWidget.dart';
 
 class XNoteApp extends StatelessWidget {
   @override
@@ -36,8 +37,8 @@ class XIndexWidgetState extends State<XIndexWidget> {
             child: XNoteFoldWidget(),
           ),
           Container(
-            color: Colors.blue,
             width: 200,
+            child: XNotePageWidget(),
           ),
           Expanded(
             child: Container(

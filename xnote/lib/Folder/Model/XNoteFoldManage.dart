@@ -1,6 +1,6 @@
 import 'XNoteFoldItemModel.dart';
 
-class XNoteFoldItemManage {
+class XNoteFoldManage {
   static List getDemoList() {
     var item1 = XNoteFoldItemModel();
     item1.name = '文件夹1';

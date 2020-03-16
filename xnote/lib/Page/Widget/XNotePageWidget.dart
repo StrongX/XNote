@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'XNoteFoldItemWidget.dart';
-import 'package:xnote/Folder/Model/XNoteFoldManage.dart';
-import 'package:xnote/Folder/Model/XNoteFoldItemModel.dart';
-import 'XNoteFoldAddWidget.dart';
+import 'XNotePageItemWidget.dart';
+import 'package:xnote/Page/Model/XNotePageManage.dart';
+import 'package:xnote/Page/Model/XNotePageItemModel.dart';
+import 'XNotePageAddWidget.dart';
 
-class XNoteFoldWidget extends StatefulWidget {
+class XNotePageWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return XNoteFolderWidgetState();
+    return XNotePageWidgetState();
   }
 }
 
-class XNoteFolderWidgetState extends State<XNoteFoldWidget> {
-  var _dataSource = List<XNoteFoldItemModel>();
+class XNotePageWidgetState extends State<XNotePageWidget> {
+  var _dataSource = List<XNotePageItemModel>();
   final _listKey = GlobalKey<AnimatedListState>();
 
   @override
   void initState() {
     super.initState();
-    _dataSource = XNoteFoldManage.getDemoList();
+    _dataSource = XNotePageManage.getDemoList();
   }
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Colors.red,
+      color: Colors.blue,
       child: AnimatedList(
         key: _listKey,
         itemBuilder: _itemBuilder,
@@ -38,12 +38,12 @@ class XNoteFolderWidgetState extends State<XNoteFoldWidget> {
   Widget _itemBuilder(
       BuildContext context, int index, Animation<double> animation) {
     if (index == 0) {
-      return XNoteFoldAddWidget(
+      return XNotePageAddWidget(
         animation: animation,
         onTap: addFoldAction,
       );
     } else {
-      return XNoteFoldItemWidget(
+      return XNotePageItemWidget(
         animation: animation,
         model: _dataSource[index - 1],
       );
@@ -52,7 +52,7 @@ class XNoteFolderWidgetState extends State<XNoteFoldWidget> {
 
   void addFoldAction() {
     _dataSource.insert(
-        0, XNoteFoldItemModel(name: '文件夹${_dataSource.length}'));
+        0, XNotePageItemModel(name: '文章${_dataSource.length}'));
     _listKey.currentState.insertItem(1);
   }
 }
