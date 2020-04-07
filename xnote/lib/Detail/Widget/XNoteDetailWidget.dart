@@ -12,10 +12,13 @@ class XNoteDetailWidget extends StatelessWidget {
     // TODO: implement build
     final controller = ScrollController();
     markdownData = XNoteDetailManage.getDemoMarkdown();
-    return Markdown(
-      controller: controller,
-      selectable: true,
-      data: markdownData,
+    return Container(
+      child: Markdown(
+        controller: controller,
+        selectable: true,
+        data: markdownData,
+      ),
+      color: Colors.white,
     );
   }
 }

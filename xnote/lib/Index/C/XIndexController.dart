@@ -26,25 +26,24 @@ class XIndexWidgetState extends State<XIndexWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text("多多笔记"),
-      ),
-      body: Row(
-        children: <Widget>[
-          Container(
-            width: 200,
-            child: XNoteFoldWidget(),
-          ),
-          Container(
-            width: 200,
-            child: XNotePageWidget(),
-          ),
-          Expanded(
-            child: XNoteDetailWidget(),
-          ),
-        ],
+    return Material(
+      type: MaterialType.transparency,
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 200,
+              child: XNoteFoldWidget(),
+            ),
+            Container(
+              width: 200,
+              child: XNotePageWidget(),
+            ),
+            Expanded(
+              child: XNoteDetailWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }
