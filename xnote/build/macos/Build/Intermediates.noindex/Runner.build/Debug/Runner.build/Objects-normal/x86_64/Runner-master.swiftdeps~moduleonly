@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
-options: "2eb969fcf6e14fba5528480b29b8e461"
-build_time: [1585498260, 154099000]
-inputs:
-  "/Users/xulixin/Desktop/Github/XNote/xnote/macos/Runner/MainFlutterWindow.swift": [1580389743, 688030603]
-  "/Users/xulixin/Desktop/Github/XNote/xnote/macos/Runner/AppDelegate.swift": [1580389743, 684185274]
-  "/Users/xulixin/Desktop/Github/XNote/xnote/macos/Flutter/GeneratedPluginRegistrant.swift": [1585498220, 768910064]
