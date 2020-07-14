@@ -18,6 +18,8 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
         return split
     }()
     
+    let folderView = FolderView(frame: NSRect.zero)
+    
     let minFolderWidth : CGFloat = 250.0
     let minMenuWidth : CGFloat = 250.0
     let minDetailWidth : CGFloat = 250.0
@@ -35,7 +37,6 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
         splitView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true;
         splitView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
 
-        let folderView = FolderView(frame: NSRect.zero)
         splitView.addSubview(folderView)
         
         let menuView = MenuView(frame: NSRect.zero)
@@ -109,6 +110,9 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
 
         firstRect = NSMakeRect(firstRect.origin.x, firstRect.origin.y, firstViewWidth, firstRect.size.height)
         firstView.frame = firstRect
+        let firstContent = self.folderView.content
+        let firstContentRect = firstContent.frame
+        firstContent.frame = NSMakeRect(0, 0, firstViewWidth, firstContentRect.height)        
 
         secondRect = NSMakeRect(firstRect.maxX, secondRect.origin.y, secondViewWidth, secondRect.height)
         secondView.frame = secondRect

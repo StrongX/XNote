@@ -17,6 +17,9 @@
 		9F302DC824B210A40024382E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DC724B210A40024382E /* MenuView.swift */; };
 		9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCA24B221850024382E /* HomeSplitView.swift */; };
 		9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCD24B4D11A0024382E /* DetailView.swift */; };
+		9F66ACD124BE04B9004450AC /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD024BE04B9004450AC /* FolderRow.swift */; };
+		9F66ACD324BE06B1004450AC /* FolderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD224BE06B1004450AC /* FolderRowModel.swift */; };
+		9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		9F302DC724B210A40024382E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9F302DCA24B221850024382E /* HomeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSplitView.swift; sourceTree = "<group>"; };
 		9F302DCD24B4D11A0024382E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9F66ACD024BE04B9004450AC /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
+		9F66ACD224BE06B1004450AC /* FolderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowModel.swift; sourceTree = "<group>"; };
+		9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,9 @@
 		9F302DC124B20D300024382E /* Folder */ = {
 			isa = PBXGroup;
 			children = (
+				9F66ACD524BE0BD0004450AC /* VM */,
+				9F66ACD424BE06B4004450AC /* M */,
+				9F66ACCF24BE04A3004450AC /* V */,
 				9F302DC224B20D510024382E /* FolderView.swift */,
 			);
 			path = Folder;
@@ -174,6 +183,30 @@
 				9F302DCD24B4D11A0024382E /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		9F66ACCF24BE04A3004450AC /* V */ = {
+			isa = PBXGroup;
+			children = (
+				9F66ACD024BE04B9004450AC /* FolderRow.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		9F66ACD424BE06B4004450AC /* M */ = {
+			isa = PBXGroup;
+			children = (
+				9F66ACD224BE06B1004450AC /* FolderRowModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		9F66ACD524BE0BD0004450AC /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +342,9 @@
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
 				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,
 				9F302DC824B210A40024382E /* MenuView.swift in Sources */,
+				9F66ACD124BE04B9004450AC /* FolderRow.swift in Sources */,
+				9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */,
+				9F66ACD324BE06B1004450AC /* FolderRowModel.swift in Sources */,
 				9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */,
 				9F302D5B24B206990024382E /* AppDelegate.swift in Sources */,
 				9F302D8824B207330024382E /* HomeView.swift in Sources */,
