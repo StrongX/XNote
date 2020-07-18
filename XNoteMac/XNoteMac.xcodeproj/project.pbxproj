@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,14 @@
 		9F302DC824B210A40024382E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DC724B210A40024382E /* MenuView.swift */; };
 		9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCA24B221850024382E /* HomeSplitView.swift */; };
 		9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCD24B4D11A0024382E /* DetailView.swift */; };
+		9F57E00324C35FFA00BDBD55 /* MnueViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00224C35FFA00BDBD55 /* MnueViewVM.swift */; };
+		9F57E00724C3615C00BDBD55 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00624C3615C00BDBD55 /* MenuViewModel.swift */; };
+		9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00924C366C400BDBD55 /* MenuListCell.swift */; };
 		9F66ACD124BE04B9004450AC /* FolderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD024BE04B9004450AC /* FolderRow.swift */; };
 		9F66ACD324BE06B1004450AC /* FolderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD224BE06B1004450AC /* FolderRowModel.swift */; };
 		9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */; };
+		9F67BEB224C36D9200A27947 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9F67BEB124C36D9200A27947 /* SnapKit */; };
+		9F67BEB724C3729300A27947 /* MenuListDescField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67BEB624C3729300A27947 /* MenuListDescField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +62,13 @@
 		9F302DC724B210A40024382E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9F302DCA24B221850024382E /* HomeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSplitView.swift; sourceTree = "<group>"; };
 		9F302DCD24B4D11A0024382E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9F57E00224C35FFA00BDBD55 /* MnueViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnueViewVM.swift; sourceTree = "<group>"; };
+		9F57E00624C3615C00BDBD55 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		9F57E00924C366C400BDBD55 /* MenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCell.swift; sourceTree = "<group>"; };
 		9F66ACD024BE04B9004450AC /* FolderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRow.swift; sourceTree = "<group>"; };
 		9F66ACD224BE06B1004450AC /* FolderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowModel.swift; sourceTree = "<group>"; };
 		9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewVM.swift; sourceTree = "<group>"; };
+		9F67BEB624C3729300A27947 /* MenuListDescField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListDescField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F67BEB224C36D9200A27947 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +120,7 @@
 		9F302D5924B206990024382E /* XNoteMac */ = {
 			isa = PBXGroup;
 			children = (
+				9F67BEB424C3727100A27947 /* Common */,
 				9F302DCC24B4D10B0024382E /* Detail */,
 				9F302DC424B20E7C0024382E /* Menu */,
 				9F302DC124B20D300024382E /* Folder */,
@@ -164,6 +175,10 @@
 		9F302DC424B20E7C0024382E /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				9F67BEB324C3725700A27947 /* V */,
+				9F57E00824C3664E00BDBD55 /* Cell */,
+				9F57E00524C3614500BDBD55 /* M */,
+				9F57E00124C35FD800BDBD55 /* VM */,
 				9F302DC724B210A40024382E /* MenuView.swift */,
 			);
 			path = Menu;
@@ -183,6 +198,30 @@
 				9F302DCD24B4D11A0024382E /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		9F57E00124C35FD800BDBD55 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				9F57E00224C35FFA00BDBD55 /* MnueViewVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		9F57E00524C3614500BDBD55 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				9F57E00624C3615C00BDBD55 /* MenuViewModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		9F57E00824C3664E00BDBD55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F57E00924C366C400BDBD55 /* MenuListCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9F66ACCF24BE04A3004450AC /* V */ = {
@@ -209,6 +248,29 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
+		9F67BEB324C3725700A27947 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				9F67BEB624C3729300A27947 /* MenuListDescField.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		9F67BEB424C3727100A27947 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9F67BEB524C3727500A27947 /* V */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9F67BEB524C3727500A27947 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,6 +287,9 @@
 			dependencies = (
 			);
 			name = XNoteMac;
+			packageProductDependencies = (
+				9F67BEB124C36D9200A27947 /* SnapKit */,
+			);
 			productName = XNoteMac;
 			productReference = 9F302D5724B206990024382E /* XNoteMac.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +362,9 @@
 				Base,
 			);
 			mainGroup = 9F302D4E24B206990024382E;
+			packageReferences = (
+				9F67BEB024C36D9200A27947 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9F302D5824B206990024382E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,9 +409,13 @@
 			files = (
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
 				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,
+				9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */,
 				9F302DC824B210A40024382E /* MenuView.swift in Sources */,
 				9F66ACD124BE04B9004450AC /* FolderRow.swift in Sources */,
+				9F57E00324C35FFA00BDBD55 /* MnueViewVM.swift in Sources */,
+				9F57E00724C3615C00BDBD55 /* MenuViewModel.swift in Sources */,
 				9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */,
+				9F67BEB724C3729300A27947 /* MenuListDescField.swift in Sources */,
 				9F66ACD324BE06B1004450AC /* FolderRowModel.swift in Sources */,
 				9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */,
 				9F302D5B24B206990024382E /* AppDelegate.swift in Sources */,
@@ -652,6 +724,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F67BEB024C36D9200A27947 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F67BEB124C36D9200A27947 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F67BEB024C36D9200A27947 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F302D4F24B206990024382E /* Project object */;
 }
