@@ -25,6 +25,14 @@
 		9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */; };
 		9F67BEB224C36D9200A27947 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9F67BEB124C36D9200A27947 /* SnapKit */; };
 		9F67BEB724C3729300A27947 /* MenuListDescField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67BEB624C3729300A27947 /* MenuListDescField.swift */; };
+		9FF0521424CB368800D85A0B /* libcmark_gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF0521324CB368800D85A0B /* libcmark_gfm */; };
+		9FF0521724CD8B0400D85A0B /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0521624CD8B0400D85A0B /* Preview.storyboard */; };
+		9FF0521924CD8B5900D85A0B /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0521824CD8B5900D85A0B /* PreViewController.swift */; };
+		9FF0521B24CD8BF500D85A0B /* PreInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0521A24CD8BF500D85A0B /* PreInputView.swift */; };
+		9FF0521D24CD8C0200D85A0B /* PreOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0521C24CD8C0200D85A0B /* PreOutputView.swift */; };
+		9FF0522324CDDF5700D85A0B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF0522224CDDF5700D85A0B /* RxSwift */; };
+		9FF0522924CDDF5700D85A0B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF0522824CDDF5700D85A0B /* RxCocoa */; };
+		9FF0522E24CDE43900D85A0B /* Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0522D24CDE43900D85A0B /* Markdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,11 @@
 		9F66ACD224BE06B1004450AC /* FolderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRowModel.swift; sourceTree = "<group>"; };
 		9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewVM.swift; sourceTree = "<group>"; };
 		9F67BEB624C3729300A27947 /* MenuListDescField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListDescField.swift; sourceTree = "<group>"; };
+		9FF0521624CD8B0400D85A0B /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
+		9FF0521824CD8B5900D85A0B /* PreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
+		9FF0521A24CD8BF500D85A0B /* PreInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreInputView.swift; sourceTree = "<group>"; };
+		9FF0521C24CD8C0200D85A0B /* PreOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOutputView.swift; sourceTree = "<group>"; };
+		9FF0522D24CDE43900D85A0B /* Markdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0522924CDDF5700D85A0B /* RxCocoa in Frameworks */,
+				9FF0522324CDDF5700D85A0B /* RxSwift in Frameworks */,
+				9FF0521424CB368800D85A0B /* libcmark_gfm in Frameworks */,
 				9F67BEB224C36D9200A27947 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +136,8 @@
 		9F302D5924B206990024382E /* XNoteMac */ = {
 			isa = PBXGroup;
 			children = (
-				9F67BEB424C3727100A27947 /* Common */,
+				9FF0522C24CDE42700D85A0B /* Business */,
+				9FF0521524CD8AB000D85A0B /* Preview */,
 				9F302DCC24B4D10B0024382E /* Detail */,
 				9F302DC424B20E7C0024382E /* Menu */,
 				9F302DC124B20D300024382E /* Folder */,
@@ -256,19 +273,23 @@
 			path = V;
 			sourceTree = "<group>";
 		};
-		9F67BEB424C3727100A27947 /* Common */ = {
+		9FF0521524CD8AB000D85A0B /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				9F67BEB524C3727500A27947 /* V */,
+				9FF0521624CD8B0400D85A0B /* Preview.storyboard */,
+				9FF0521824CD8B5900D85A0B /* PreViewController.swift */,
+				9FF0521A24CD8BF500D85A0B /* PreInputView.swift */,
+				9FF0521C24CD8C0200D85A0B /* PreOutputView.swift */,
 			);
-			path = Common;
+			path = Preview;
 			sourceTree = "<group>";
 		};
-		9F67BEB524C3727500A27947 /* V */ = {
+		9FF0522C24CDE42700D85A0B /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				9FF0522D24CDE43900D85A0B /* Markdown.swift */,
 			);
-			path = V;
+			path = Business;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +310,9 @@
 			name = XNoteMac;
 			packageProductDependencies = (
 				9F67BEB124C36D9200A27947 /* SnapKit */,
+				9FF0521324CB368800D85A0B /* libcmark_gfm */,
+				9FF0522224CDDF5700D85A0B /* RxSwift */,
+				9FF0522824CDDF5700D85A0B /* RxCocoa */,
 			);
 			productName = XNoteMac;
 			productReference = 9F302D5724B206990024382E /* XNoteMac.app */;
@@ -364,6 +388,8 @@
 			mainGroup = 9F302D4E24B206990024382E;
 			packageReferences = (
 				9F67BEB024C36D9200A27947 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9FF0521224CB368800D85A0B /* XCRemoteSwiftPackageReference "libcmark_gfm" */,
+				9FF0522124CDDF5700D85A0B /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 9F302D5824B206990024382E /* Products */;
 			projectDirPath = "";
@@ -383,6 +409,7 @@
 			files = (
 				9F302D5F24B2069A0024382E /* Assets.xcassets in Resources */,
 				9F302D8A24B2087B0024382E /* Home.storyboard in Resources */,
+				9FF0521724CD8B0400D85A0B /* Preview.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,15 +435,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
+				9FF0521D24CD8C0200D85A0B /* PreOutputView.swift in Sources */,
 				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,
 				9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */,
+				9FF0521B24CD8BF500D85A0B /* PreInputView.swift in Sources */,
 				9F302DC824B210A40024382E /* MenuView.swift in Sources */,
+				9FF0522E24CDE43900D85A0B /* Markdown.swift in Sources */,
 				9F66ACD124BE04B9004450AC /* FolderRow.swift in Sources */,
 				9F57E00324C35FFA00BDBD55 /* MnueViewVM.swift in Sources */,
 				9F57E00724C3615C00BDBD55 /* MenuViewModel.swift in Sources */,
 				9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */,
 				9F67BEB724C3729300A27947 /* MenuListDescField.swift in Sources */,
 				9F66ACD324BE06B1004450AC /* FolderRowModel.swift in Sources */,
+				9FF0521924CD8B5900D85A0B /* PreViewController.swift in Sources */,
 				9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */,
 				9F302D5B24B206990024382E /* AppDelegate.swift in Sources */,
 				9F302D8824B207330024382E /* HomeView.swift in Sources */,
@@ -734,6 +765,22 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		9FF0521224CB368800D85A0B /* XCRemoteSwiftPackageReference "libcmark_gfm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:KristopherGBaker/libcmark_gfm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.29.3;
+			};
+		};
+		9FF0522124CDDF5700D85A0B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +788,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F67BEB024C36D9200A27947 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		9FF0521324CB368800D85A0B /* libcmark_gfm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF0521224CB368800D85A0B /* XCRemoteSwiftPackageReference "libcmark_gfm" */;
+			productName = libcmark_gfm;
+		};
+		9FF0522224CDDF5700D85A0B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF0522124CDDF5700D85A0B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		9FF0522824CDDF5700D85A0B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF0522124CDDF5700D85A0B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

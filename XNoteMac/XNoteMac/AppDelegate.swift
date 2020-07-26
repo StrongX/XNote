@@ -19,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window?.setContentSize(NSMakeSize(1200, 800))
         window?.center()
         window?.showsToolbarButton = true
-        window?.setContentSize(NSMakeSize(1200, 800))
         window?.minSize = NSMakeSize(800, 500)
     }
 
