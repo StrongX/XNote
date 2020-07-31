@@ -9,16 +9,7 @@
 import Cocoa
 
 class HomeViewController: NSViewController, NSSplitViewDelegate {
-    
-    lazy var splitView : HomeSplitView = {
-        let split = HomeSplitView()
-        split.isVertical = true
-        split.dividerStyle = .thin
-        split.delegate = self
-        return split
-    }()
-    
-    let folderView = FolderView(frame: NSRect.zero)
+    @IBOutlet weak var splitView : NSSplitView!
     
     let minFolderWidth : CGFloat = 250.0
     let minMenuWidth : CGFloat = 250.0
@@ -30,21 +21,8 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
     override func viewDidLoad() {
         // add splitView
         
-        self.view.addSubview(splitView)
-        splitView.translatesAutoresizingMaskIntoConstraints = false
-        splitView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true;
-        splitView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true;
-        splitView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true;
-        splitView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true;
-
-        splitView.addSubview(folderView)
-        
-        let menuView = MenuView(frame: NSRect.zero)
-        splitView.addSubview(menuView)
-        
-        let detailView = DetailView(frame: NSRect.zero)
-        splitView.addSubview(detailView);
-        
+        self.splitView.delegate = self
+                
     }
     
     func splitView(_ splitView: NSSplitView, constrainMaxCoordinate proposedMaximumPosition: CGFloat, ofSubviewAt dividerIndex: Int) -> CGFloat {
@@ -110,9 +88,6 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
 
         firstRect = NSMakeRect(firstRect.origin.x, firstRect.origin.y, firstViewWidth, firstRect.size.height)
         firstView.frame = firstRect
-        let firstContent = self.folderView.content
-        let firstContentRect = firstContent.frame
-        firstContent.frame = NSMakeRect(0, 0, firstViewWidth, firstContentRect.height)        
 
         secondRect = NSMakeRect(firstRect.maxX, secondRect.origin.y, secondViewWidth, secondRect.height)
         secondView.frame = secondRect

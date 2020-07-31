@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9B243824D417DE00298D08 /* OutlineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9B243724D417DE00298D08 /* OutlineHeaderView.swift */; };
+		2A9B243B24D4181900298D08 /* NSAppearance+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9B243A24D4181900298D08 /* NSAppearance+Theme.swift */; };
 		9F302D5B24B206990024382E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302D5A24B206990024382E /* AppDelegate.swift */; };
 		9F302D5F24B2069A0024382E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F302D5E24B2069A0024382E /* Assets.xcassets */; };
 		9F302D6E24B2069A0024382E /* XNoteMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302D6D24B2069A0024382E /* XNoteMacTests.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A9B243724D417DE00298D08 /* OutlineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineHeaderView.swift; sourceTree = "<group>"; };
+		2A9B243A24D4181900298D08 /* NSAppearance+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAppearance+Theme.swift"; sourceTree = "<group>"; };
 		9F302D5724B206990024382E /* XNoteMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNoteMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F302D5A24B206990024382E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F302D5E24B2069A0024382E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +117,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9B243524D4179B00298D08 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2A9B243924D4180300298D08 /* Extension */,
+				2A9B243624D417B900298D08 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2A9B243624D417B900298D08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A9B243724D417DE00298D08 /* OutlineHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A9B243924D4180300298D08 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2A9B243A24D4181900298D08 /* NSAppearance+Theme.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9F302D4E24B206990024382E = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +165,7 @@
 		9F302D5924B206990024382E /* XNoteMac */ = {
 			isa = PBXGroup;
 			children = (
+				2A9B243524D4179B00298D08 /* Common */,
 				9FF0522C24CDE42700D85A0B /* Business */,
 				9FF0521524CD8AB000D85A0B /* Preview */,
 				9F302DCC24B4D10B0024382E /* Detail */,
@@ -434,9 +464,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9B243824D417DE00298D08 /* OutlineHeaderView.swift in Sources */,
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
 				9FF0521D24CD8C0200D85A0B /* PreOutputView.swift in Sources */,
 				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,
+				2A9B243B24D4181900298D08 /* NSAppearance+Theme.swift in Sources */,
 				9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */,
 				9FF0521B24CD8BF500D85A0B /* PreInputView.swift in Sources */,
 				9F302DC824B210A40024382E /* MenuView.swift in Sources */,
@@ -611,6 +643,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = xlx.XNoteMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -629,6 +662,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = xlx.XNoteMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
