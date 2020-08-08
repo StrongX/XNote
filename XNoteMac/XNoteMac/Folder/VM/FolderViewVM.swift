@@ -16,7 +16,16 @@ class FolderViewVM {
         item1.title = "iOS"
         let item2 = FolderItem()
         item2.title = "Swift"
-        noteSection.children = [item1, item2]
+        
+        var children:[FolderItem] = [item1, item2]
+        
+        let urls = Storage.shared.getSubFolders(url: Storage.shared.localDocumentsContainer!)
+        urls?.forEach({ (url) in
+            let standardizedURL = (url as URL).standardized
+            children.append(FolderItem(url: standardizedURL))
+        })
+        
+        noteSection.children = children
         return [noteSection]
     }
     

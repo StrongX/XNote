@@ -37,6 +37,7 @@
 		9FF0523224D714EE00D85A0B /* FolderDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523124D714EE00D85A0B /* FolderDataCell.swift */; };
 		9FF0523424D71AB700D85A0B /* FolderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523324D71AB700D85A0B /* FolderSection.swift */; };
 		9FF0523624D71AC200D85A0B /* FolderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523524D71AC200D85A0B /* FolderItem.swift */; };
+		9FF0523824DE7F5000D85A0B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523724DE7F5000D85A0B /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		9FF0523124D714EE00D85A0B /* FolderDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDataCell.swift; sourceTree = "<group>"; };
 		9FF0523324D71AB700D85A0B /* FolderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderSection.swift; sourceTree = "<group>"; };
 		9FF0523524D71AC200D85A0B /* FolderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItem.swift; sourceTree = "<group>"; };
+		9FF0523724DE7F5000D85A0B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF0522D24CDE43900D85A0B /* Markdown.swift */,
+				9FF0523724DE7F5000D85A0B /* Storage.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9B243824D417DE00298D08 /* OutlineHeaderView.swift in Sources */,
+				9FF0523824DE7F5000D85A0B /* Storage.swift in Sources */,
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
 				9FF0521D24CD8C0200D85A0B /* PreOutputView.swift in Sources */,
 				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,

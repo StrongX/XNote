@@ -11,4 +11,10 @@ import Foundation
 class FolderItem {
     var title = ""
     var icon = ""
+    
+    init(url:URL? = nil) {
+        if let u = url {
+            self.title = u.lastPathComponent
+        }
+    }
 }

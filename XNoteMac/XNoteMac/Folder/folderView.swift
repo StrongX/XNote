@@ -17,6 +17,7 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        layer?.backgroundColor = NSColor(red:0.96, green:0.96, blue:0.96, alpha:1.0).cgColor
         outLineView.delegate = self
         outLineView.dataSource = self
         dataArr.forEach { (section) in
@@ -78,7 +79,47 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     // MARK: - NSOutlineViewDelegate
     
     
+    // MARK: - IBAction
+    @IBAction func addProject(_ sender: Any) {
+        let alert = NSAlert()
+        let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 290, height: 20))
+        alert.messageText = NSLocalizedString("New project", comment: "")
+        alert.informativeText = NSLocalizedString("Please enter project name:", comment: "")
+        alert.accessoryView = field
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: NSLocalizedString("Add", comment: ""))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: ""))
+        alert.beginSheetModal(for: self.window!) { (returnCode: NSApplication.ModalResponse) -> Void in
+            if returnCode == NSApplication.ModalResponse.alertFirstButtonReturn {
+                self.addChild(field: field)
+            }
+        }
+        
+        field.becomeFirstResponder()
+    }
     
+    @IBAction func revealInFinder(_ sender: Any) {
+//        guard let si = getSidebarItem(), let p = si.project else { return }
+//
+//        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: p.url.path)
+        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!)
+
+        
+    }
     
+    // MARK: - Private
+    private func addChild(field: NSTextField) {
+        let value = field.stringValue
+        guard value.count > 0 else { return }
+        
+        do {
+            let folderURL = Storage.shared.localDocumentsContainer?.appendingPathComponent(value, isDirectory: true)
+            try FileManager.default.createDirectory(at: folderURL!, withIntermediateDirectories: false, attributes: nil)
+        } catch {
+            let alert = NSAlert()
+            alert.messageText = error.localizedDescription
+            alert.runModal()
+        }
+    }
     
 }

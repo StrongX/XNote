@@ -711,20 +711,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-cn-gg4">
-                                <rect key="frame" x="0.0" y="0.0" width="654" height="516"/>
+                                <rect key="frame" x="0.0" y="0.0" width="654" height="512"/>
                                 <subviews>
                                     <customView misplaced="YES" id="RRV-yb-mtY" customClass="FolderView" customModule="XNoteMac" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="218" height="516"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-4M-usE">
-                                                <rect key="frame" x="0.0" y="-1" width="218" height="478"/>
+                                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-4M-usE">
+                                                <rect key="frame" x="0.0" y="1" width="218" height="474"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="7wG-vL-4Y2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="478"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="474"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="UiP-Vz-uXB" id="gaF-Iu-9sr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="478"/>
+                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="UiP-Vz-uXB" id="gaF-Iu-9sr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="474"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -810,7 +810,7 @@
                                                 </scroller>
                                             </scrollView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="LA9-37-poK">
-                                                <rect key="frame" x="0.0" y="477" width="218" height="38"/>
+                                                <rect key="frame" x="0.0" y="475" width="218" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="LBH-bJ-LAy"/>
                                                 </constraints>
@@ -831,12 +831,12 @@
                                         </connections>
                                     </customView>
                                     <customView fixedFrame="YES" id="C60-h2-dTM">
-                                        <rect key="frame" x="219" y="0.0" width="219" height="516"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="219" y="0.0" width="219" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </customView>
                                     <customView fixedFrame="YES" id="wmA-58-sIS">
-                                        <rect key="frame" x="439" y="0.0" width="215" height="516"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <rect key="frame" x="439" y="0.0" width="215" height="512"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>
@@ -863,12 +863,18 @@
                         <menuItem title="Back up storage" keyEquivalent="S" id="kQw-Lp-mO3"/>
                         <menuItem title="New folder" keyEquivalent="N" id="BL1-33-D0W">
                             <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                            <connections>
+                                <action selector="addProject:" target="RRV-yb-mtY" id="nph-YL-aLU"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Rename folder" keyEquivalent="R" id="kQb-Jo-Mqp">
                             <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                         </menuItem>
                         <menuItem title="Show in Finder" keyEquivalent="R" id="eIk-Qc-ViG">
                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                            <connections>
+                                <action selector="revealInFinder:" target="RRV-yb-mtY" id="dDK-CS-MLd"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Delete folder" id="Z81-1v-Knb">
                             <string key="keyEquivalent" base64-UTF8="YES">
