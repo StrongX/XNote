@@ -11,19 +11,16 @@ import Cocoa
 class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     @IBOutlet weak var outLineView : NSOutlineView!
     
-    lazy var dataArr : [FolderSection] = {
-        return FolderViewVM.getFolderSection()
-    }()
+    var dataArr : [FolderSection] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer?.backgroundColor = NSColor(red:0.96, green:0.96, blue:0.96, alpha:1.0).cgColor
         outLineView.delegate = self
         outLineView.dataSource = self
-        dataArr.forEach { (section) in
-            outLineView.expandItem(section)
-        }
+        reloadOutLineView()
     }
+    
     
     // MARK: - NSOutlineViewDataSource
     
@@ -99,11 +96,13 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     }
     
     @IBAction func revealInFinder(_ sender: Any) {
-//        guard let si = getSidebarItem(), let p = si.project else { return }
-//
-//        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: p.url.path)
-        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!)
-
+        let selectedObject = getFolderItem()
+        
+        if let item = selectedObject as? FolderItem {
+            NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: item.url!.path)
+        } else {
+            NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: Storage.shared.localDocumentsContainer!.path)
+        }
         
     }
     
@@ -115,11 +114,34 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
         do {
             let folderURL = Storage.shared.localDocumentsContainer?.appendingPathComponent(value, isDirectory: true)
             try FileManager.default.createDirectory(at: folderURL!, withIntermediateDirectories: false, attributes: nil)
+            reloadOutLineView()
         } catch {
             let alert = NSAlert()
             alert.messageText = error.localizedDescription
             alert.runModal()
         }
+    }
+    
+    private func reloadOutLineView() {
+        self.dataArr = FolderViewVM.getFolderSection()
+        self.outLineView.reloadData()
+        dataArr.forEach { (section) in
+            outLineView.expandItem(section)
+        }
+    }
+    
+    private func getFolderItem() -> Any? {
+        var selected = self.outLineView.selectedRow
+        for section in dataArr {
+            if selected <= 0 {
+                return section
+            } else if (selected < section.children.count + 1) {
+                return section.children[selected - 1]
+            } else {
+                selected -= (section.children.count+1)
+            }
+        }
+        return nil
     }
     
 }

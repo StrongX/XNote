@@ -68,7 +68,8 @@ class Storage {
             }
         }
         
-        return subdirs
+        return subdirs.sorted { (url1, url2) -> Bool in
+            url1.lastPathComponent!.lowercased() < url2.lastPathComponent!.lowercased()
+        }
     }
-    
 }
