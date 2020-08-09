@@ -18,10 +18,8 @@
 		9F302DC324B20D510024382E /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DC224B20D510024382E /* FolderView.swift */; };
 		9F302DC824B210A40024382E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DC724B210A40024382E /* MenuView.swift */; };
 		9F302DCB24B221850024382E /* HomeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCA24B221850024382E /* HomeSplitView.swift */; };
-		9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F302DCD24B4D11A0024382E /* DetailView.swift */; };
 		9F57E00324C35FFA00BDBD55 /* MnueViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00224C35FFA00BDBD55 /* MnueViewVM.swift */; };
 		9F57E00724C3615C00BDBD55 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00624C3615C00BDBD55 /* MenuViewModel.swift */; };
-		9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57E00924C366C400BDBD55 /* MenuListCell.swift */; };
 		9F66ACD724BE0CB6004450AC /* FolderViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */; };
 		9F67BEB224C36D9200A27947 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9F67BEB124C36D9200A27947 /* SnapKit */; };
 		9F67BEB724C3729300A27947 /* MenuListDescField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67BEB624C3729300A27947 /* MenuListDescField.swift */; };
@@ -38,6 +36,7 @@
 		9FF0523424D71AB700D85A0B /* FolderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523324D71AB700D85A0B /* FolderSection.swift */; };
 		9FF0523624D71AC200D85A0B /* FolderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523524D71AC200D85A0B /* FolderItem.swift */; };
 		9FF0523824DE7F5000D85A0B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523724DE7F5000D85A0B /* Storage.swift */; };
+		9FF0523C24DEB7A700D85A0B /* FolderOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0523B24DEB7A700D85A0B /* FolderOutlineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +75,8 @@
 		9F302DC224B20D510024382E /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		9F302DC724B210A40024382E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9F302DCA24B221850024382E /* HomeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSplitView.swift; sourceTree = "<group>"; };
-		9F302DCD24B4D11A0024382E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9F57E00224C35FFA00BDBD55 /* MnueViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnueViewVM.swift; sourceTree = "<group>"; };
 		9F57E00624C3615C00BDBD55 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		9F57E00924C366C400BDBD55 /* MenuListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCell.swift; sourceTree = "<group>"; };
 		9F66ACD624BE0CB6004450AC /* FolderViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewVM.swift; sourceTree = "<group>"; };
 		9F67BEB624C3729300A27947 /* MenuListDescField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListDescField.swift; sourceTree = "<group>"; };
 		9FF0521624CD8B0400D85A0B /* Preview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
@@ -92,6 +89,7 @@
 		9FF0523324D71AB700D85A0B /* FolderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderSection.swift; sourceTree = "<group>"; };
 		9FF0523524D71AC200D85A0B /* FolderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderItem.swift; sourceTree = "<group>"; };
 		9FF0523724DE7F5000D85A0B /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		9FF0523B24DEB7A700D85A0B /* FolderOutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderOutlineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +172,6 @@
 				2A9B243524D4179B00298D08 /* Common */,
 				9FF0522C24CDE42700D85A0B /* Business */,
 				9FF0521524CD8AB000D85A0B /* Preview */,
-				9F302DCC24B4D10B0024382E /* Detail */,
 				9F302DC424B20E7C0024382E /* Menu */,
 				9F302DC124B20D300024382E /* Folder */,
 				9F302D8624B207060024382E /* Home */,
@@ -245,14 +242,6 @@
 			path = V;
 			sourceTree = "<group>";
 		};
-		9F302DCC24B4D10B0024382E /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				9F302DCD24B4D11A0024382E /* DetailView.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		9F57E00124C35FD800BDBD55 /* VM */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,7 +261,6 @@
 		9F57E00824C3664E00BDBD55 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9F57E00924C366C400BDBD55 /* MenuListCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -282,6 +270,7 @@
 			children = (
 				9FF0522F24D714E200D85A0B /* FolderHeaderCell.swift */,
 				9FF0523124D714EE00D85A0B /* FolderDataCell.swift */,
+				9FF0523B24DEB7A700D85A0B /* FolderOutlineView.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -477,10 +466,9 @@
 				9FF0523824DE7F5000D85A0B /* Storage.swift in Sources */,
 				9F302DC324B20D510024382E /* FolderView.swift in Sources */,
 				9FF0521D24CD8C0200D85A0B /* PreOutputView.swift in Sources */,
-				9F302DCE24B4D11A0024382E /* DetailView.swift in Sources */,
 				2A9B243B24D4181900298D08 /* NSAppearance+Theme.swift in Sources */,
 				9FF0523224D714EE00D85A0B /* FolderDataCell.swift in Sources */,
-				9F57E00A24C366C400BDBD55 /* MenuListCell.swift in Sources */,
+				9FF0523C24DEB7A700D85A0B /* FolderOutlineView.swift in Sources */,
 				9FF0521B24CD8BF500D85A0B /* PreInputView.swift in Sources */,
 				9F302DC824B210A40024382E /* MenuView.swift in Sources */,
 				9FF0522E24CDE43900D85A0B /* Markdown.swift in Sources */,

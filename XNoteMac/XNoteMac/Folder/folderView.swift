@@ -7,15 +7,22 @@
 //
 
 import Cocoa
+import SnapKit
 
 class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     @IBOutlet weak var outLineView : NSOutlineView!
-    
+    @IBOutlet weak var headerView : NSView!
+
     var dataArr : [FolderSection] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer?.backgroundColor = NSColor(red:0.96, green:0.96, blue:0.96, alpha:1.0).cgColor
+        outLineView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo(self)
+            make.top.equalTo(headerView.snp_bottomMargin)
+        }
+        
         outLineView.delegate = self
         outLineView.dataSource = self
         reloadOutLineView()
