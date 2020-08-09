@@ -11,6 +11,10 @@ import Cocoa
 class MenuViewVM {
     static func getMenuListData(folderUrl:URL) -> [Note] {
         let urls = Storage.shared.getSubNoteFile(url: folderUrl)
-        return []
+        var notes : [Note] = []
+        urls?.forEach({ (url) in
+            notes.append(Note(url:url.standardized!))
+        })
+        return notes
     }
 }

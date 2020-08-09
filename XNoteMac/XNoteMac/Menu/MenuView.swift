@@ -8,7 +8,9 @@
 
 import Cocoa
 
-class MenuView: NSView {
+class MenuView: NSView, NSTableViewDelegate, NSTableViewDataSource {
+    @IBOutlet weak var tableView : NSTableView!
+    
     var folderItem : Any? {
         didSet{
             reloadTable()
@@ -17,6 +19,12 @@ class MenuView: NSView {
     
     var dataArr : [Note] = []
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
     
     @IBAction func fileMenuNewNote(_ sender: Any) {
         if let item = folderItem as? FolderItem {

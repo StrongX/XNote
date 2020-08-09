@@ -9,5 +9,12 @@
 import Foundation
 
 class Note {
+    var url:URL
+    var imageUrl: [URL]?
+
+    
+    init(url : URL) {
+        self.url = url
+    }
     
 }
