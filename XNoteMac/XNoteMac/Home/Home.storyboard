@@ -711,20 +711,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-cn-gg4">
-                                <rect key="frame" x="0.0" y="0.0" width="654" height="518"/>
+                                <rect key="frame" x="0.0" y="0.0" width="654" height="514"/>
                                 <subviews>
                                     <customView misplaced="YES" id="RRV-yb-mtY" customClass="FolderView" customModule="XNoteMac" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="218" height="518"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="514"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="57" horizontalPageScroll="10" verticalLineScroll="57" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-4M-usE">
-                                                <rect key="frame" x="0.0" y="-1" width="218" height="480"/>
+                                                <rect key="frame" x="0.0" y="-1" width="218" height="476"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="7wG-vL-4Y2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="480"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="476"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="UiP-Vz-uXB" id="gaF-Iu-9sr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="480"/>
+                                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="55" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="UiP-Vz-uXB" id="gaF-Iu-9sr" customClass="FolderOutlineView" customModule="XNoteMac" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="218" height="476"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -796,6 +796,9 @@
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
                                                             </tableColumns>
+                                                            <connections>
+                                                                <outlet property="menu" destination="H9c-Eh-dVN" id="8xJ-gV-Ntd"/>
+                                                            </connections>
                                                         </outlineView>
                                                     </subviews>
                                                     <nil key="backgroundColor"/>
@@ -810,7 +813,7 @@
                                                 </scroller>
                                             </scrollView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="LA9-37-poK">
-                                                <rect key="frame" x="0.0" y="479" width="218" height="38"/>
+                                                <rect key="frame" x="0.0" y="475" width="218" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="LBH-bJ-LAy"/>
                                                 </constraints>
@@ -827,16 +830,15 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="headerView" destination="LA9-37-poK" id="8Y6-0X-ehg"/>
-                                            <outlet property="menu" destination="H9c-Eh-dVN" id="XhH-82-MpL"/>
                                             <outlet property="outLineView" destination="gaF-Iu-9sr" id="TGr-Md-Ced"/>
                                         </connections>
                                     </customView>
-                                    <customView misplaced="YES" id="C60-h2-dTM">
-                                        <rect key="frame" x="219" y="0.0" width="219" height="518"/>
+                                    <customView misplaced="YES" id="C60-h2-dTM" customClass="MenuView" customModule="XNoteMac" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="0.0" width="219" height="514"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="vVF-12-XHC">
-                                                <rect key="frame" x="0.0" y="479" width="219" height="38"/>
+                                                <rect key="frame" x="0.0" y="475" width="219" height="38"/>
                                                 <subviews>
                                                     <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvx-qa-Lab">
                                                         <rect key="frame" x="8" y="8" width="170" height="22"/>
@@ -856,6 +858,9 @@
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="label" size="12"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="fileMenuNewNote:" target="C60-h2-dTM" id="Ygy-za-sjR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -875,7 +880,7 @@
                                         </constraints>
                                     </customView>
                                     <customView fixedFrame="YES" id="wmA-58-sIS">
-                                        <rect key="frame" x="439" y="0.0" width="215" height="518"/>
+                                        <rect key="frame" x="439" y="0.0" width="215" height="514"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </customView>
                                 </subviews>
@@ -894,11 +899,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="folderView" destination="RRV-yb-mtY" id="wJw-fp-eI5"/>
+                        <outlet property="menuView" destination="C60-h2-dTM" id="Ce7-H1-K0Y"/>
                         <outlet property="splitView" destination="uUX-cn-gg4" id="mLD-KX-Nrj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <menu id="H9c-Eh-dVN">
+                <menu id="H9c-Eh-dVN" userLabel="Folder Menu">
                     <items>
                         <menuItem title="Back up storage" keyEquivalent="S" id="kQw-Lp-mO3"/>
                         <menuItem title="New folder" keyEquivalent="N" id="BL1-33-D0W">

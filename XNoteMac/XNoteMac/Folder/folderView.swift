@@ -13,6 +13,8 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     @IBOutlet weak var outLineView : NSOutlineView!
     @IBOutlet weak var headerView : NSView!
 
+    @objc dynamic var currentItem : Any?
+    
     var dataArr : [FolderSection] = []
     
     override func awakeFromNib() {
@@ -81,6 +83,9 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
     
     
     // MARK: - NSOutlineViewDelegate
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        self.currentItem = getFolderItem()
+    }
     
     
     // MARK: - IBAction
@@ -118,14 +123,8 @@ class FolderView: NSView, NSOutlineViewDataSource, NSOutlineViewDelegate {
         let value = field.stringValue
         guard value.count > 0 else { return }
         
-        do {
-            let folderURL = Storage.shared.localDocumentsContainer?.appendingPathComponent(value, isDirectory: true)
-            try FileManager.default.createDirectory(at: folderURL!, withIntermediateDirectories: false, attributes: nil)
+        if Storage.shared.createNewFolder(name: value) {
             reloadOutLineView()
-        } catch {
-            let alert = NSAlert()
-            alert.messageText = error.localizedDescription
-            alert.runModal()
         }
     }
     

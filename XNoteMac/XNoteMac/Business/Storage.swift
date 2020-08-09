@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 class Storage {
     
@@ -70,6 +71,48 @@ class Storage {
         
         return subdirs.sorted { (url1, url2) -> Bool in
             url1.lastPathComponent!.lowercased() < url2.lastPathComponent!.lowercased()
+        }
+    }
+    
+    func getSubNoteFile(url:URL) -> [NSURL]? {
+        guard let fileEnumerator = FileManager.default.enumerator(at: url, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions()) else { return nil }
+
+
+        let urls = fileEnumerator.allObjects.filter { allowedExtensions.contains(($0 as? NSURL)!.pathExtension!)  } as! [NSURL]
+        
+        
+        return urls.sorted { (url1, url2) -> Bool in
+            url1.lastPathComponent!.lowercased() < url2.lastPathComponent!.lowercased()
+        }
+
+    }
+    
+    @discardableResult func createNewNote(folderUrl:URL?) -> URL? {
+        guard folderUrl != nil else {
+            return nil
+        }
+        let filePath = NameHelper.getUniqueFileName(folderUrl: folderUrl!)
+        
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            return nil
+        }
+        guard FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil) else {
+            print("fail")
+            return nil
+        }
+        return filePath
+    }
+    
+    @discardableResult func createNewFolder(name: String) -> Bool {
+        do {
+            let folderURL = localDocumentsContainer?.appendingPathComponent(name, isDirectory: true)
+            try FileManager.default.createDirectory(at: folderURL!, withIntermediateDirectories: false, attributes: nil)
+            return true
+        } catch {
+            let alert = NSAlert()
+            alert.messageText = error.localizedDescription
+            alert.runModal()
+            return false
         }
     }
 }

@@ -7,9 +7,16 @@
 //
 
 import Cocoa
+import RxSwift
+import RxCocoa
 
 class HomeViewController: NSViewController, NSSplitViewDelegate {
+    
     @IBOutlet weak var splitView : NSSplitView!
+    @IBOutlet weak var folderView : FolderView!
+    @IBOutlet weak var menuView : MenuView!
+    
+    let folderDispose = DisposeBag()
     
     let minFolderWidth : CGFloat = 250.0
     let minMenuWidth : CGFloat = 250.0
@@ -21,8 +28,11 @@ class HomeViewController: NSViewController, NSSplitViewDelegate {
     override func viewDidLoad() {
         // add splitView
         
-        self.splitView.delegate = self
-                
+        self.splitView.delegate = self        
+        
+        folderView.rx.observe(AnyClass.self, #keyPath(FolderView.currentItem)).subscribe(onNext: { [weak self] _ in
+            self?.menuView.folderItem = self?.folderView.currentItem
+        }).disposed(by: folderDispose)
     }
     
     func splitView(_ splitView: NSSplitView, constrainMaxCoordinate proposedMaximumPosition: CGFloat, ofSubviewAt dividerIndex: Int) -> CGFloat {

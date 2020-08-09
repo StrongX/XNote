@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FolderItem {
+class FolderItem: NSObject {
     var title = ""
     var icon = ""
     var url: URL? = nil
